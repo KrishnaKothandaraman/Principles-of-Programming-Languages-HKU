@@ -84,8 +84,7 @@ mapList f (x:xs) = [f x] ++ (mapList f xs)
 -- >>> ascii "abcds"
 -- [97,98,99,100,115]
 ascii :: [Char] -> [Int]
-ascii [] = []
-ascii (x:xs) = [ord x] ++ (ascii xs)
+ascii xs = mapList ord xs
 
 
 
